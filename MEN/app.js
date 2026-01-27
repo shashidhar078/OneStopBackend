@@ -12,7 +12,7 @@ const server = http.createServer((req,res)=>{
     {
         res.end("This is profile page")
     }
-    res.end("Hello world");
+    // res.end("Hello world");
 })
 
 server.listen(3000)
