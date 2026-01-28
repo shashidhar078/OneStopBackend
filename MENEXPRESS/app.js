@@ -1,8 +1,11 @@
 const express=require('express')
 const app=express();
 
+//implementing ejs 
+app.set("view engine","ejs")
 app.get("/about",(req,res)=>{
     res.send("This is About page");
+    
 })
 
 
@@ -12,7 +15,8 @@ app.get("/home",(req,res)=>{
 
 
 app.use("/",(req,res)=>{
-    res.send("This my About page");
+    // res.send("This my About page");
+    res.render('index')
 })
 
 app.listen(3000,()=>{
